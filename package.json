@@ -1,0 +1,35 @@
+{
+  "name": "moip-sdk-js",
+  "version": "2.1.1",
+  "description": "Moip SDK Node.js",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": "https://github.com/brunoosilva/moip-sdk-js",
+  "author": "Bruno Oliveira",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-istanbul": "^0.12.2",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "coveralls": "^3.0.0",
+    "jasmine": "^3.0.0",
+    "jasmine-console-reporter": "^2.0.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9",
+    "webpack-concat-plugin": "3.0.0-beta.0",
+    "webpack-node-externals": "^1.6.0",
+    "node-jsencrypt": "^1.0.0"
+  },
+  "scripts": {
+    "build:lib": "WEBPACK_ENV=lib webpack",
+    "build": "WEBPACK_ENV=module webpack",
+    "test": "babel-node ./node_modules/.bin/babel-istanbul cover run-test.js",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "publish": ""
+  }
+}
